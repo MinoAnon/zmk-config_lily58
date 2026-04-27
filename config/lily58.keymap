@@ -32,7 +32,7 @@
         Change: Change {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            bindings = <&none &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E &kp LPAR &kp SQT &kp SQT &kp COMMA &kp SQT &kp SQT &kp RPAR>;
             label = "CHANGE";
         };
 
@@ -55,13 +55,6 @@
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp LS(C) &kp LS(O) &kp LS(N) &kp LS(T) &kp LS(E) &kp LS(M) &kp LS(P) &kp LS(L) &kp LS(A) &kp LS(T) &kp LS(I) &kp LS(V) &kp LS(E) &kp RPAR>;
             label = "THINKING";
-        };
-
-        Parenthesis_Quote: Parenthesis_Quote {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp LPAR &kp SQT &kp SQT &kp COMMA &kp SQT &kp SQT &kp RPAR>;
-            label = "PARENTHESIS_QUOTE";
         };
 
         If_guest_has: If_guest_has {
@@ -90,6 +83,13 @@
             #binding-cells = <0>;
             bindings = <&none &kp LS(T) &kp H &kp E &kp M &kp B &kp A>;
             label = "THEMBA";
+        };
+
+        Embarrassed: Embarrassed {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp LS(E) &kp LS(M) &kp LS(B) &kp LS(A) &kp LS(R) &kp LS(R) &kp LS(A) &kp LS(S) &kp LS(S) &kp LS(E) &kp LS(D) &kp RPAR>;
+            label = "EMBARRASSED";
         };
     };
 
@@ -146,7 +146,7 @@
 &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans      &trans      &kp PSCRN          &kp PG_UP        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &trans      &trans        &trans        &trans        &trans        &trans                              &trans      &trans      &kp UP             &kp PAGE_DOWN    &kp LBKT              &kp RBKT
 &kp TILDE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                           &trans      &kp LEFT    &kp DOWN           &kp RIGHT        &kp SLASH             &kp BACKSLASH
-&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL     &kp C_PLAY  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                &trans
+&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &mo 3     &kp DEL     &kp C_PLAY  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                &trans
                                         &trans        &trans        &trans        &trans    &kp DELETE  &kp DELETE  &trans      &trans
             >;
 
@@ -155,11 +155,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans     &trans  &trans   &kp DOLLAR  &trans                           &trans    &trans  &trans              &trans          &trans  &trans
-&trans  &trans     &trans  &Emote   &trans      &Themba                          &trans    &trans  &trans              &Contemplative  &trans  &trans
-&trans  &Asterion  &trans  &trans   &trans      &If_guest_has                    &trans    &trans  &Kota               &Luke           &trans  &trans
-&trans  &trans     &trans  &Change  &trans      &trans         &trans    &trans  &Neutral  &trans  &trans              &trans          &trans  &trans
-                           &trans   &trans      &trans         &trans    &trans  &trans    &trans  &Parenthesis_Quote
+&trans  &trans     &trans  &trans   &kp DOLLAR  &trans                           &trans    &trans        &trans  &trans          &trans  &trans
+&trans  &trans     &trans  &Emote   &trans      &Themba                          &trans    &trans        &trans  &Contemplative  &trans  &trans
+&trans  &Asterion  &trans  &trans   &trans      &If_guest_has                    &trans    &trans        &Kota   &Luke           &trans  &trans
+&trans  &trans     &trans  &Change  &trans      &trans         &trans    &trans  &Neutral  &Embarrassed  &trans  &trans          &trans  &trans
+                           &trans   &trans      &trans         &trans    &trans  &trans    &trans        &trans
             >;
         };
     };
