@@ -124,11 +124,11 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12        &kp F1       &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11
-&kp GRAVE      &kp N1       &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &kp MINUS
-&mt LCTRL ESC  &trans       &trans  &trans  &trans  &trans                    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-&kp LSHIFT     &test_macro  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
-                                    &trans  &trans  &trans  &trans    &trans  &trans       &trans     &trans
+&kp F12        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11
+&kp GRAVE      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &kp MINUS
+&mt LCTRL ESC  &trans  &trans  &trans  &trans  &trans                    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
+&kp LSHIFT     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
+                               &trans  &trans  &trans  &trans    &trans  &trans       &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -155,11 +155,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans     &trans  &trans   &kp DOLLAR  &trans                    &trans    &trans  &trans              &trans          &trans  &trans
-&trans  &trans     &trans  &Emote   &trans      &trans                    &trans    &trans  &trans              &Contemplative  &trans  &trans
-&trans  &Asterion  &trans  &trans   &trans      &trans                    &trans    &trans  &trans              &trans          &trans  &trans
-&trans  &trans     &trans  &Change  &trans      &trans  &trans    &trans  &Neutral  &trans  &trans              &trans          &trans  &trans
-                           &trans   &trans      &trans  &trans    &trans  &trans    &trans  &Parenthesis_Quote
+&trans  &trans     &trans  &trans   &kp DOLLAR  &trans                           &trans    &trans  &trans              &trans          &trans  &trans
+&trans  &trans     &trans  &Emote   &trans      &Themba                          &trans    &trans  &trans              &Contemplative  &trans  &trans
+&trans  &Asterion  &trans  &trans   &trans      &If_guest_has                    &trans    &trans  &Kota               &Luke           &trans  &trans
+&trans  &trans     &trans  &Change  &trans      &trans         &trans    &trans  &Neutral  &trans  &trans              &trans          &trans  &trans
+                           &trans   &trans      &trans         &trans    &trans  &trans    &trans  &Parenthesis_Quote
             >;
         };
     };
