@@ -64,6 +64,20 @@
             bindings = <&none &kp LPAR &kp LS(C) &kp LS(O) &kp LS(N) &kp LS(T) &kp LS(E) &kp LS(M) &kp LS(P) &kp LS(L) &kp LS(A) &kp LS(T) &kp LS(I) &kp LS(V) &kp LS(E) &kp RPAR>;
             label = "THINKING";
         };
+
+        Parenthesis_Quote: Parenthesis_Quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp SQT &kp SQT &kp COMMA &kp SQT &kp SQT &kp RPAR>;
+            label = "PARENTHESIS_QUOTE";
+        };
+
+        If_guest_has: If_guest_has {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp F &kp SPACE &kp G &kp U &kp E &kp S &kp T &kp S &kp DOT &kp H &kp A &kp S &kp UNDER &kp G &kp U &kp E &kp S &kp T &kp LPAR &kp DQT &kp DQT &kp RPAR &kp COLON>;
+            label = "IF_GUEST_HAS";
+        };
     };
 
     keymap {
@@ -128,11 +142,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans     &trans  &trans   &trans  &trans                    &trans    &trans  &trans  &trans          &trans  &trans
-&trans  &trans     &trans  &Emote   &trans  &trans                    &trans    &trans  &trans  &Contemplative  &trans  &trans
-&trans  &Asterion  &trans  &trans   &trans  &trans                    &trans    &trans  &trans  &trans          &trans  &trans
-&trans  &trans     &trans  &Change  &trans  &trans  &trans    &trans  &Neutral  &trans  &trans  &trans          &trans  &trans
-                           &trans   &trans  &trans  &trans    &trans  &trans    &trans  &trans
+&trans  &trans     &trans  &trans   &trans  &trans                           &trans    &trans  &trans              &trans          &trans  &trans
+&trans  &trans     &trans  &Emote   &trans  &trans                           &trans    &trans  &trans              &Contemplative  &trans  &trans
+&trans  &Asterion  &trans  &trans   &trans  &If_guest_has                    &trans    &trans  &trans              &trans          &trans  &trans
+&trans  &trans     &trans  &Change  &trans  &trans         &trans    &trans  &Neutral  &trans  &trans              &trans          &trans  &trans
+                           &trans   &trans  &trans         &trans    &trans  &trans    &trans  &Parenthesis_Quote
             >;
         };
     };
