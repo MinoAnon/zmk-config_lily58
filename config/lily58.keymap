@@ -29,6 +29,41 @@
 
             label = "TEST_MACRO";
         };
+
+        Asterion: Asterion {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N>;
+            label = "ASTERION";
+        };
+
+        Change: Change {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "CHANGE";
+        };
+
+        Emote: Emote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DOT &kp E &kp M &kp O &kp T &kp E>;
+            label = "EMOTE";
+        };
+
+        Neutral: Neutral {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp LS(N) &kp LS(E) &kp LS(U) &kp LS(T) &kp LS(R) &kp LS(A) &kp LS(L) &kp RPAR>;
+            label = "NEUTRAL";
+        };
+
+        Contemplative: Thinking {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp LS(C) &kp LS(O) &kp LS(N) &kp LS(T) &kp LS(E) &kp LS(M) &kp LS(P) &kp LS(L) &kp LS(A) &kp LS(T) &kp LS(I) &kp LS(V) &kp LS(E) &kp RPAR>;
+            label = "THINKING";
+        };
     };
 
     keymap {
@@ -89,6 +124,25 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans     &trans  &trans   &trans  &trans                    &trans    &trans  &trans  &trans          &trans  &trans
+&trans  &trans     &trans  &Emote   &trans  &trans                    &trans    &trans  &trans  &Contemplative  &trans  &trans
+&trans  &Asterion  &trans  &trans   &trans  &trans                    &trans    &trans  &trans  &trans          &trans  &trans
+&trans  &trans     &trans  &Change  &trans  &trans  &trans    &trans  &Neutral  &trans  &trans  &trans          &trans  &trans
+                           &trans   &trans  &trans  &trans    &trans  &trans    &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        MinoHotel_Coding {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
