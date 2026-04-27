@@ -22,18 +22,10 @@
     };
 
     macros {
-        test_macro: test_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &kp E &kp S &kp T>, <&macro_tap>;
-
-            label = "TEST_MACRO";
-        };
-
         Asterion: Asterion {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp DLLR &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N>;
+            bindings = <&none &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N>;
             label = "ASTERION";
         };
 
@@ -77,6 +69,20 @@
             #binding-cells = <0>;
             bindings = <&none &kp I &kp F &kp SPACE &kp G &kp U &kp E &kp S &kp T &kp S &kp DOT &kp H &kp A &kp S &kp UNDER &kp G &kp U &kp E &kp S &kp T &kp LPAR &kp DQT &kp DQT &kp RPAR &kp COLON>;
             label = "IF_GUEST_HAS";
+        };
+
+        Luke: Luke {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(L) &kp U &kp K &kp E>;
+            label = "LUKE";
+        };
+
+        Kota: Kota {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(K) &kp O &kp T &kp A>;
+            label = "KOTA";
         };
     };
 
@@ -130,11 +136,11 @@
             //                               |      |       |      |       |  |         |      |       |       |
 
             bindings = <
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &kp K_CALCULATOR  &kp PRINTSCREEN    &kp PAGE_UP      &kp K_SCROLL_UP    &trans    &trans
-&trans      &trans        &trans        &trans        &trans        &trans                              &kp C_PLAY        &kp UP_ARROW       &kp PAGE_DOWN    &kp K_SCROLL_DOWN  &kp RBKT  &kp BSLH
-&kp TILDE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                           &kp LEFT          &kp DOWN           &kp RIGHT        &kp LPAR           &kp RPAR  &kp UNDER
-&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LBRC           &kp RBRC  &kp RSHFT
-                                        &trans        &trans        &trans        &trans    &kp DELETE  &kp DELETE        &trans             &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans      &trans      &kp PSCRN          &kp PG_DN        &kp C_AC_SCROLL_UP    &trans
+&trans      &trans        &trans        &trans        &trans        &trans                              &trans      &trans      &kp UP             &kp PAGE_DOWN    &kp C_AC_SCROLL_DOWN  &kp BSLH
+&kp TILDE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                           &trans      &kp LEFT    &kp DOWN           &kp RIGHT        &kp RPAR              &kp UNDER
+&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL     &kp C_PLAY  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp RBRC              &kp RSHFT
+                                        &trans        &trans        &trans        &trans    &kp DELETE  &kp DELETE  &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -142,11 +148,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans     &trans  &trans   &trans  &trans                           &trans    &trans  &trans              &trans          &trans  &trans
-&trans  &trans     &trans  &Emote   &trans  &trans                           &trans    &trans  &trans              &Contemplative  &trans  &trans
-&trans  &Asterion  &trans  &trans   &trans  &If_guest_has                    &trans    &trans  &trans              &trans          &trans  &trans
-&trans  &trans     &trans  &Change  &trans  &trans         &trans    &trans  &Neutral  &trans  &trans              &trans          &trans  &trans
-                           &trans   &trans  &trans         &trans    &trans  &trans    &trans  &Parenthesis_Quote
+&trans  &trans     &trans  &trans   &kp DOLLAR  &trans                           &trans    &trans  &trans              &trans          &trans  &trans
+&trans  &trans     &trans  &Emote   &trans      &trans                           &trans    &trans  &trans              &Contemplative  &trans  &trans
+&trans  &Asterion  &trans  &trans   &trans      &If_guest_has                    &trans    &trans  &Kota               &Luke           &trans  &trans
+&trans  &trans     &trans  &Change  &trans      &trans         &trans    &trans  &Neutral  &trans  &trans              &trans          &trans  &trans
+                           &trans   &trans      &trans         &trans    &trans  &trans    &trans  &Parenthesis_Quote
             >;
         };
     };
