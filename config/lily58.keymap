@@ -21,6 +21,16 @@
         };
     };
 
+    macros {
+        test_macro: test_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp T &kp E &kp S &kp T>, <&macro_tap>;
+
+            label = "TEST_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,11 +62,11 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11
-&kp GRAVE      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &kp MINUS
-&mt LCTRL ESC  &trans  &trans  &trans  &trans  &trans                    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
-&kp LSHIFT     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
-                               &trans  &trans  &trans  &trans    &trans  &trans       &trans     &trans
+&kp F12        &kp F1       &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11
+&kp GRAVE      &kp N1       &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6       &kp N7     &kp N8     &kp N9     &kp N0    &kp MINUS
+&mt LCTRL ESC  &trans       &trans  &trans  &trans  &trans                    &kp LEFT     &kp DOWN   &kp UP     &kp RIGHT  &trans    &trans
+&kp LSHIFT     &test_macro  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
+                                    &trans  &trans  &trans  &trans    &trans  &trans       &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -71,11 +81,11 @@
             //                               |      |       |      |       |  |         |      |       |       |
 
             bindings = <
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &kp K_CALCULATOR  &kp PRINTSCREEN    &kp PAGE_UP      &trans    &trans    &trans
-&trans      &trans        &trans        &trans        &trans        &trans                           &kp C_PLAY        &kp UP_ARROW       &kp PAGE_DOWN    &kp LBKT  &kp RBKT  &kp BSLH
-&kp TILDE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                        &kp LEFT          &kp DOWN           &kp RIGHT        &kp LPAR  &kp RPAR  &kp UNDER
-&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL  &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LBRC  &kp RBRC  &kp RSHFT
-                                        &trans        &trans        &trans        &trans    &trans   &kp DELETE        &trans             &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &kp K_CALCULATOR  &kp PRINTSCREEN    &kp PAGE_UP      &kp K_SCROLL_UP    &trans    &trans
+&trans      &trans        &trans        &trans        &trans        &trans                              &kp C_PLAY        &kp UP_ARROW       &kp PAGE_DOWN    &kp K_SCROLL_DOWN  &kp RBKT  &kp BSLH
+&kp TILDE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                           &kp LEFT          &kp DOWN           &kp RIGHT        &kp LPAR           &kp RPAR  &kp UNDER
+&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL     &kp C_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LBRC           &kp RBRC  &kp RSHFT
+                                        &trans        &trans        &trans        &trans    &kp DELETE  &kp DELETE        &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
