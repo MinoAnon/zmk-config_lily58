@@ -232,6 +232,27 @@
             bindings = <&none &kp I &kp F &kp SPACE &kp P &kp L &kp A &kp Y &kp E &kp R &kp UNDER &kp K &kp I &kp N &kp K &kp S &kp LBKT &kp SQT &kp LS(M) &kp O &kp O &kp D &kp SQT &kp RBKT &kp SPACE &kp EQUAL &kp EQUAL &kp SPACE &kp DQT &kp LS(R) &kp O &kp M &kp A &kp N &kp T &kp I &kp C &kp DQT &kp COLON>;
             label = "ROMANTIC";
         };
+
+        Dominant: Dominant {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp F &kp SPACE &kp P &kp L &kp A &kp Y &kp E &kp R &kp UNDER &kp K &kp I &kp N &kp K &kp S &kp LBKT &kp SQT &kp LS(M) &kp O &kp O &kp D &kp SQT &kp RBKT &kp SPACE &kp EQUAL &kp EQUAL &kp SPACE &kp DQT &kp LS(D) &kp O &kp M &kp I &kp N &kp A &kp N &kp T &kp DQT &kp COLON>;
+            label = "DOMINANT";
+        };
+
+        Servicetop: Servicetop {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp F &kp SPACE &kp P &kp L &kp A &kp Y &kp E &kp R &kp UNDER &kp K &kp I &kp N &kp K &kp S &kp LBKT &kp SQT &kp LS(M) &kp O &kp O &kp D &kp SQT &kp RBKT &kp SPACE &kp EQUAL &kp EQUAL &kp SPACE &kp DQT &kp LS(S) &kp E &kp R &kp V &kp I &kp C &kp E &kp LS(T) &kp O &kp P &kp DQT &kp COLON>;
+            label = "SERVICETOP";
+        };
+
+        Rough: Rough {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp F &kp SPACE &kp P &kp L &kp A &kp Y &kp E &kp R &kp UNDER &kp K &kp I &kp N &kp K &kp S &kp LBKT &kp SQT &kp LS(M) &kp O &kp O &kp D &kp SQT &kp RBKT &kp SPACE &kp EQUAL &kp EQUAL &kp SPACE &kp DQT &kp LS(R) &kp O &kp U &kp G &kp H &kp DQT &kp COLON>;
+            label = "ROUGH";
+        };
     };
 
     keymap {
@@ -306,11 +327,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans                    &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &Romantic  &trans                    &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans                    &trans  &trans        &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans        &trans  &trans  &trans  &trans
-                        &trans  &trans     &trans  &trans    &trans  &trans  &Playerkinks  &trans
+&trans  &trans  &trans  &trans     &trans     &trans                         &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &Romantic  &Servicetop                    &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &Dominant  &trans     &Rough                         &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans       &trans    &trans  &trans  &trans        &trans  &trans  &trans  &trans
+                        &trans     &trans     &trans       &trans    &trans  &trans  &Playerkinks  &trans
             >;
         };
     };
