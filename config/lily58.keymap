@@ -218,6 +218,13 @@
             bindings = <&none &kp LPAR &kp LS(A) &kp LS(N) &kp LS(N) &kp LS(O) &kp LS(Y) &kp LS(E) &kp LS(D) &kp RPAR>;
             label = "ANNOYED";
         };
+
+        Playerkinks: Playerkinks {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp I &kp F &kp SPACE &kp P &kp L &kp A &kp Y &kp E &kp R &kp UNDER &kp K &kp I &kp N &kp K &kp S>;
+            label = "PLAYERKINKS";
+        };
     };
 
     keymap {
@@ -232,11 +239,11 @@
             //                        | ALT  | GUI  | LOWER|  SPACE |  | BSPC  | ENTER| RAISE | CTRL  |
 
             bindings = <
-&kp ESCAPE        &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                                               &kp N6   &kp N7  &kp N8            &kp N9   &kp N0    &kp EQUAL
-&kp LEFT_ALT      &kp Q   &kp W   &kp E    &kp R   &kp T                                                &kp Y    &kp U   &kp I             &kp O    &kp P     &kp MINUS
-&kp CLCK          &kp A   &kp S   &kp D    &kp F   &kp G                                                &kp H    &kp J   &kp K             &kp L    &kp SEMI  &kp RBKT
-&kp LEFT_BRACKET  &kp Z   &kp X   &kp C    &kp V   &kp B             &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &kp N    &kp M   &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_CONTROL
-                                  &kp TAB  &mo 2   &kp LEFT_CONTROL  &kp SPACE         &kp BSPC         &kp RET  &mo 1   &kp SINGLE_QUOTE
+&kp ESCAPE    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                                               &kp N6   &kp N7  &kp N8            &kp N9   &kp N0    &kp EQUAL
+&kp LEFT_ALT  &kp Q   &kp W   &kp E    &kp R   &kp T                                                &kp Y    &kp U   &kp I             &kp O    &kp P     &kp MINUS
+&kp CLCK      &kp A   &kp S   &kp D    &kp F   &kp G                                                &kp H    &kp J   &kp K             &kp L    &kp SEMI  &kp RBKT
+&tog 4        &kp Z   &kp X   &kp C    &kp V   &kp B             &kp LEFT_SHIFT    &kp RIGHT_SHIFT  &kp N    &kp M   &kp COMMA         &kp DOT  &kp FSLH  &kp RIGHT_CONTROL
+                              &kp TAB  &mo 2   &kp LEFT_CONTROL  &kp SPACE         &kp BSPC         &kp RET  &mo 1   &kp SINGLE_QUOTE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -287,6 +294,16 @@
 &trans  &Asterion_Emote  &Sad      &Determined   &trans      &Angry                                 &Horny    &trans   &Shocked  &trans    &trans  &trans
 &trans  &trans           &Excited  &Crying       &trans      &trans     &Asterion_Emote    &Change  &Neutral  &Mooing  &trans    &trans    &trans  &trans
                                    &trans        &trans      &trans     &trans             &trans   &trans    &trans   &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &Playerkinks  &trans
             >;
         };
     };
