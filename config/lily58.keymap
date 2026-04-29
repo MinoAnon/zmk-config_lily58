@@ -358,6 +358,20 @@
             bindings = <&none &kp LBKT &kp SQT &kp LS(O) &kp R &kp G &kp A &kp S &kp M &kp LS(D) &kp E &kp N &kp I &kp A &kp L &kp SQT &kp RBKT &kp COLON>;
             label = "ORGASMDENIAL";
         };
+
+        TODO: TODO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp POUND &kp LS(T) &kp LS(O) &kp LS(D) &kp LS(O) &kp COLON>;
+            label = "TODO";
+        };
+
+        else: else {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp E &kp L &kp S &kp E &kp COLON>;
+            label = "ELSE";
+        };
     };
 
     keymap {
@@ -423,8 +437,8 @@
         AsterionExpressions {
             bindings = <
 &trans  &trans           &trans    &trans        &kp DOLLAR  &Tired                                 &trans    &trans   &trans    &trans    &trans  &trans
-&trans  &trans           &trans    &Embarrassed  &Relieved   &Thinking                              &Angry    &trans   &Smiling  &Annoyed  &Proud  &trans
-&trans  &Asterion_Emote  &Sad      &Determined   &trans      &Angry                                 &Horny    &trans   &Shocked  &trans    &trans  &trans
+&trans  &trans           &trans    &Embarrassed  &Relieved   &Thinking                              &Angry    &TODO    &Smiling  &Annoyed  &Proud  &trans
+&trans  &Asterion_Emote  &Sad      &Determined   &trans      &Angry                                 &Horny    &else    &Shocked  &trans    &trans  &trans
 &trans  &trans           &Excited  &Crying       &trans      &trans     &Asterion_Emote    &Change  &Neutral  &Mooing  &trans    &trans    &trans  &trans
                                    &trans        &trans      &trans     &trans             &trans   &trans    &trans   &trans
             >;
@@ -433,9 +447,9 @@
         Chapter20Macros {
             bindings = <
 &trans  &trans  &trans  &trans        &trans     &trans                            &trans    &trans        &trans     &trans         &trans          &trans
-&trans  &trans  &trans  &PregnancyRP  &Romantic  &Servicetop                       &trans    &trans        &trans     &OrgasmDenial  &ExtraPleasure  &trans
-&trans  &trans  &trans  &Dominant     &trans     &Rough                            &trans    &trans        &trans     &trans         &trans          &trans
-&tog 0  &trans  &trans  &ExtraCum     &Vocal     &trans       &SmallPP     &Musk0  &NoTouch  &trans        &trans     &trans         &trans          &trans
+&trans  &trans  &trans  &PregnancyRP  &Romantic  &Servicetop                       &trans    &TODO         &trans     &OrgasmDenial  &ExtraPleasure  &trans
+&trans  &trans  &trans  &Dominant     &trans     &Rough                            &trans    &else         &trans     &trans         &trans          &trans
+&tog 0  &trans  &trans  &ExtraCum     &Vocal     &trans       &SmallPP     &Musk0  &NoTouch  &PregnancyRP  &trans     &trans         &trans          &trans
                         &Bull         &Human     &BigPP       &NormalPP    &Musk1  &Musk2    &Playerkinks  &BigBalls
             >;
         };
