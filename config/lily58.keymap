@@ -631,11 +631,11 @@
 
         AsterionDYEL {
             bindings = <
-&trans  &trans    &trans  &trans  &trans    &trans                             &trans          &trans  &trans  &trans     &trans  &trans
-&trans  &trans    &trans  &trans  &trans    &trans                             &trans          &trans  &trans  &trans     &trans  &trans
-&trans  &angry    &trans  &trans  &Flicker  &trans                             &trans          &trans  &trans  &Laughing  &trans  &trans
-&trans  &Angrier  &trans  &trans  &trans    &trans  &trans    &AsterionChange  &trans          &trans  &trans  &trans     &trans  &trans
-                          &trans  &trans    &trans  &trans    &Neutral2        &Contemplative  &Open   &Smirk
+&trans  &trans    &trans     &trans     &trans      &trans                                &trans          &trans  &trans   &trans     &trans  &trans
+&trans  &trans    &Wistful   &trans     &trans      &trans                                &trans          &trans  &Tired2  &trans     &trans  &trans
+&trans  &angry    &Surprise  &Dissoc    &Flicker    &trans                                &Happy          &trans  &trans   &Laughing  &trans  &trans
+&trans  &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AsterionChange  &Tense          &trans  &trans   &trans     &trans  &trans
+                             &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2        &Contemplative  &Open   &Smirk
             >;
         };
     };
