@@ -526,6 +526,13 @@
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp W &kp I &kp S &kp T &kp F &kp U &kp L &kp DQT &kp RPAR>;
             label = "WISTFUL";
         };
+
+        Dissoc: Dissociating {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp D &kp I &kp S &kp S &kp O &kp C &kp I &kp A &kp T &kp I &kp N &kp G &kp DQT &kp RPAR>;
+            label = "DISSOCIATING";
+        };
     };
 
     keymap {
