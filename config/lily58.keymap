@@ -533,6 +533,20 @@
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp D &kp I &kp S &kp S &kp O &kp C &kp I &kp A &kp T &kp I &kp N &kp G &kp DQT &kp RPAR>;
             label = "DISSOCIATING";
         };
+
+        ArmsBack: ArmsBack {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(B) &kp A &kp C &kp K &kp LPAR &kp RPAR>;
+            label = "ARMSBACK";
+        };
+
+        ArmsLoose: ArmsLoose {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(L) &kp O &kp O &kp S &kp E &kp LPAR &kp RPAR>;
+            label = "ARMSLOOSE";
+        };
     };
 
     keymap {
@@ -612,6 +626,16 @@
 &trans  &trans  &trans  &Dominant     &trans     &Rough                            &trans    &else         &show      &UDGCG         &trans          &trans
 &tog 0  &trans  &trans  &ExtraCum     &Vocal     &trans       &SmallPP     &Musk0  &NoTouch  &PregnancyRP  &hide      &udgPANEL      &Dissolve       &trans
                         &Bull         &Human     &BigPP       &NormalPP    &Musk1  &Musk2    &Playerkinks  &BigBalls
+            >;
+        };
+
+        AsterionDYEL {
+            bindings = <
+&trans  &trans    &trans  &trans  &trans    &trans                             &trans          &trans  &trans  &trans     &trans  &trans
+&trans  &trans    &trans  &trans  &trans    &trans                             &trans          &trans  &trans  &trans     &trans  &trans
+&trans  &angry    &trans  &trans  &Flicker  &trans                             &trans          &trans  &trans  &Laughing  &trans  &trans
+&trans  &Angrier  &trans  &trans  &trans    &trans  &trans    &AsterionChange  &trans          &trans  &trans  &trans     &trans  &trans
+                          &trans  &trans    &trans  &trans    &Neutral2        &Contemplative  &Open   &Smirk
             >;
         };
     };
