@@ -407,6 +407,83 @@
             bindings = <&none &kp SPACE &kp W &kp I &kp T &kp H &kp SPACE &kp LS(D) &kp I &kp S &kp S &kp O &kp L &kp V &kp E &kp LPAR &kp N1 &kp RPAR>;
             label = "DISSOLVE";
         };
+
+        AsterionChange: AsterionChange {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "ASTERIONCHANGE";
+        };
+
+        Neutral2: Neutral2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp N &kp E &kp U &kp T &kp R &kp A &kp L &kp DQT &kp RPAR>;
+            label = "NEUTRAL2";
+        };
+
+        Smiling2: Smiling2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp S &kp M &kp I &kp L &kp I &kp N &kp G &kp DQT &kp RPAR>;
+            label = "SMILING2";
+        };
+
+        angry: angry {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp A &kp N &kp G &kp R &kp Y &kp DQT &kp RPAR>;
+            label = "ANGRY";
+        };
+
+        Sad2: Sad2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp S &kp A &kp D &kp DQT &kp RPAR>;
+            label = "SAD2";
+        };
+
+        Surprise: Surprise {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp S &kp U &kp R &kp P &kp R &kp I &kp S &kp E &kp DQT &kp RPAR>;
+            label = "SURPRISE";
+        };
+
+        Tired2: Tired2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp T &kp I &kp R &kp E &kp D &kp DQT &kp RPAR>;
+            label = "TIRED2";
+        };
+
+        Bowing: Bowing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp B &kp O &kp W &kp I &kp N &kp G &kp DQT &kp RPAR>;
+            label = "BOWING";
+        };
+
+        Laughing: Laughing {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp L &kp A &kp U &kp G &kp H &kp I &kp N &kp G &kp DQT &kp RPAR>;
+            label = "LAUGHING";
+        };
+
+        Contemplative: Contemplative {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp C &kp O &kp N &kp T &kp E &kp M &kp P &kp L &kp A &kp T &kp I &kp V &kp E &kp DQT &kp RPAR>;
+            label = "CONTEMPLATIVE";
+        };
+
+        Angrier: Angrier {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp A &kp N &kp G &kp R &kp I &kp E &kp R &kp DQT &kp RPAR>;
+            label = "ANGRIER";
+        };
     };
 
     keymap {
@@ -471,10 +548,10 @@
 
         AsterionExpressions {
             bindings = <
-&trans  &trans           &trans    &trans        &kp DOLLAR  &Tired                                 &trans    &trans   &trans    &trans    &trans  &trans
-&trans  &trans           &trans    &Embarrassed  &Relieved   &Thinking                              &Angry    &TODO    &Smiling  &Annoyed  &Proud  &trans
-&trans  &Asterion_Emote  &Sad      &Determined   &trans      &Angry                                 &Horny    &else    &Shocked  &trans    &trans  &trans
-&trans  &trans           &Excited  &Crying       &trans      &trans     &Asterion_Emote    &Change  &Neutral  &Mooing  &trans    &trans    &trans  &trans
+&trans  &trans           &trans    &trans        &kp DOLLAR  &Tired2                                &trans    &trans   &trans     &trans    &trans  &trans
+&trans  &trans           &trans    &Embarrassed  &Relieved   &Thinking                              &Angry    &TODO    &Smiling2  &Annoyed  &Proud  &trans
+&trans  &Asterion_Emote  &Sad2     &Determined   &trans      &Angry                                 &Horny    &else    &Shocked   &trans    &trans  &trans
+&trans  &trans           &Excited  &Crying       &trans      &trans     &Asterion_Emote    &Change  &Neutral  &Mooing  &trans     &trans    &trans  &trans
                                    &trans        &trans      &trans     &trans             &trans   &trans    &trans   &trans
             >;
         };
