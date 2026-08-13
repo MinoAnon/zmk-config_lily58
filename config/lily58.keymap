@@ -408,7 +408,7 @@
             label = "DISSOLVE";
         };
 
-        AsterionChange: AsterionChange {
+        AstCh: AsterionChange {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp DLLR &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
@@ -666,11 +666,11 @@
 
         AsterionDYEL {
             bindings = <
-&LeftRaised   &trans    &trans     &trans     &trans      &trans                                &trans    &trans  &trans   &trans     &trans  &trans
-&LeftRelaxed  &trans    &Wistful   &trans     &trans      &trans                                &trans    &trans  &Tired2  &trans     &trans  &RightHips
-&LeftBack     &angry    &Surprise  &Dissoc    &Flicker    &trans                                &Happy    &trans  &trans   &Laughing  &trans  &RightBack
-&trans        &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AsterionChange  &Tense    &trans  &trans   &trans     &trans  &trans
-                                   &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2        &Contemp  &Open   &Smirk
+&LeftRaised   &trans    &trans     &trans     &trans      &trans                          &trans    &trans  &trans   &trans     &trans  &trans
+&LeftRelaxed  &trans    &Wistful   &trans     &trans      &trans                          &trans    &trans  &Tired2  &trans     &trans  &RightHips
+&LeftBack     &angry    &Surprise  &Dissoc    &Flicker    &trans                          &Happy    &trans  &trans   &Laughing  &trans  &RightBack
+&trans        &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AstCh     &Tense    &trans  &trans   &trans     &trans  &trans
+                                   &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2  &Contemp  &Open   &Smirk
             >;
         };
     };
