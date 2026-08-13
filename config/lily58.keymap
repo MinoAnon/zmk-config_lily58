@@ -484,6 +484,48 @@
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp A &kp N &kp G &kp R &kp I &kp E &kp R &kp DQT &kp RPAR>;
             label = "ANGRIER";
         };
+
+        Flicker: Flicker {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp F &kp L &kp I &kp C &kp K &kp E &kp R &kp DQT &kp RPAR>;
+            label = "FLICKER";
+        };
+
+        Happy: Happy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp H &kp A &kp P &kp P &kp Y &kp DQT &kp RPAR>;
+            label = "HAPPY";
+        };
+
+        Open: Open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp O &kp P &kp E &kp N &kp DQT &kp RPAR>;
+            label = "OPEN";
+        };
+
+        Smirk: Smirk {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp S &kp M &kp I &kp R &kp K &kp DQT &kp RPAR>;
+            label = "SMIRK";
+        };
+
+        Tense: Tense {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp T &kp E &kp N &kp S &kp E &kp DQT &kp RPAR>;
+            label = "TENSE";
+        };
+
+        Wistful: Wistful {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp W &kp I &kp S &kp T &kp F &kp U &kp L &kp DQT &kp RPAR>;
+            label = "WISTFUL";
+        };
     };
 
     keymap {
