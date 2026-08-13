@@ -415,32 +415,32 @@
             label = "ASTERIONCHANGE";
         };
 
-        Neutral2: Neutral2 {
+        NeutralY: NeutralY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp N &kp E &kp U &kp T &kp R &kp A &kp L &kp DQT &kp RPAR>;
-            label = "NEUTRAL2";
+            label = "NEUTRALY";
         };
 
-        Smiling2: Smiling2 {
+        Smile: Smile {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp S &kp M &kp I &kp L &kp I &kp N &kp G &kp DQT &kp RPAR>;
-            label = "SMILING2";
+            label = "SMILE";
         };
 
-        angry: angry {
+        angryy: angryy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp A &kp N &kp G &kp R &kp Y &kp DQT &kp RPAR>;
-            label = "ANGRY";
+            label = "ANGRYY";
         };
 
-        Sad2: Sad2 {
+        SadY: SadY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp S &kp A &kp D &kp DQT &kp RPAR>;
-            label = "SAD2";
+            label = "SADY";
         };
 
         Surprise: Surprise {
@@ -450,11 +450,11 @@
             label = "SURPRISE";
         };
 
-        Tired2: Tired2 {
+        TiredY: TiredY {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp T &kp I &kp R &kp E &kp D &kp DQT &kp RPAR>;
-            label = "TIRED2";
+            label = "TIREDY";
         };
 
         Bowing: Bowing {
@@ -646,10 +646,10 @@
 
         AsterionExpressions {
             bindings = <
-&trans  &trans           &trans    &trans        &kp DOLLAR  &Tired2                                &trans    &trans   &trans     &trans    &trans  &trans
-&trans  &trans           &trans    &Embarrassed  &Relieved   &Thinking                              &Angry    &TODO    &Smiling2  &Annoyed  &Proud  &trans
-&trans  &Asterion_Emote  &Sad2     &Determined   &trans      &Angry                                 &Horny    &else    &Shocked   &trans    &trans  &trans
-&trans  &trans           &Excited  &Crying       &trans      &trans     &Asterion_Emote    &Change  &Neutral  &Mooing  &trans     &trans    &trans  &trans
+&trans  &trans           &trans    &trans        &kp DOLLAR  &TiredY                                &trans    &trans   &trans    &trans    &trans  &trans
+&trans  &trans           &trans    &Embarrassed  &Relieved   &Thinking                              &Angry    &TODO    &Smile    &Annoyed  &Proud  &trans
+&trans  &Asterion_Emote  &SadY     &Determined   &trans      &Angry                                 &Horny    &else    &Shocked  &trans    &trans  &trans
+&trans  &trans           &Excited  &Crying       &trans      &trans     &Asterion_Emote    &Change  &Neutral  &Mooing  &trans    &trans    &trans  &trans
                                    &trans        &trans      &trans     &trans             &trans   &trans    &trans   &trans
             >;
         };
@@ -666,11 +666,11 @@
 
         AsterionDYEL {
             bindings = <
-&LRais   &trans    &trans     &trans     &trans      &trans                          &trans    &trans  &trans   &trans     &trans  &trans
-&LRelax  &trans    &Wistful   &trans     &trans      &trans                          &trans    &trans  &Tired2  &trans     &trans  &RHips
-&LBack   &angry    &Surprise  &Dissoc    &Flicker    &trans                          &Happy    &trans  &trans   &Laughing  &trans  &RBack
-&trans   &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AstCh     &Tense    &trans  &trans   &trans     &trans  &trans
-                              &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2  &Contemp  &Open   &Smirk
+&LRais   &trans    &trans     &trans     &trans      &trans                        &trans    &trans  &trans   &trans     &trans  &trans
+&LRelax  &trans    &Wistful   &trans     &trans      &trans                        &trans    &trans  &TiredY  &trans     &trans  &RHips
+&LBack   &angryy   &Surprise  &Dissoc    &Flicker    &trans                        &Happy    &trans  &trans   &Laughing  &trans  &RBack
+&trans   &Angrier  &trans     &trans     &trans      &Bowing  &trans    &AstCh     &Tense    &trans  &trans   &trans     &trans  &trans
+                              &ArmsBack  &ArmsLoose  &Smile   &SadY     &NeutralY  &Contemp  &Open   &Smirk
             >;
         };
     };
