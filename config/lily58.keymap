@@ -471,7 +471,7 @@
             label = "LAUGHING";
         };
 
-        Contemplative: Contemplative {
+        Contemp: Contemplative {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&none &kp LPAR &kp DQT &kp E &kp M &kp O &kp T &kp I &kp O &kp N &kp DQT &kp COMMA &kp DQT &kp C &kp O &kp N &kp T &kp E &kp M &kp P &kp L &kp A &kp T &kp I &kp V &kp E &kp DQT &kp RPAR>;
@@ -666,11 +666,11 @@
 
         AsterionDYEL {
             bindings = <
-&LeftRaised   &trans    &trans     &trans     &trans      &trans                                &trans          &trans  &trans   &trans     &trans  &trans
-&LeftRelaxed  &trans    &Wistful   &trans     &trans      &trans                                &trans          &trans  &Tired2  &trans     &trans  &RightHips
-&LeftBack     &angry    &Surprise  &Dissoc    &Flicker    &trans                                &Happy          &trans  &trans   &Laughing  &trans  &RightBack
-&trans        &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AsterionChange  &Tense          &trans  &trans   &trans     &trans  &trans
-                                   &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2        &Contemplative  &Open   &Smirk
+&LeftRaised   &trans    &trans     &trans     &trans      &trans                                &trans    &trans  &trans   &trans     &trans  &trans
+&LeftRelaxed  &trans    &Wistful   &trans     &trans      &trans                                &trans    &trans  &Tired2  &trans     &trans  &RightHips
+&LeftBack     &angry    &Surprise  &Dissoc    &Flicker    &trans                                &Happy    &trans  &trans   &Laughing  &trans  &RightBack
+&trans        &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AsterionChange  &Tense    &trans  &trans   &trans     &trans  &trans
+                                   &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2        &Contemp  &Open   &Smirk
             >;
         };
     };
