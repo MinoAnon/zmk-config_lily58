@@ -537,14 +537,14 @@
         ArmsBack: ArmsBack {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(B) &kp A &kp C &kp K &kp LPAR &kp RPAR>;
+            bindings = <&none &kp DOLLAR &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(B) &kp A &kp C &kp K &kp LPAR &kp RPAR>;
             label = "ARMSBACK";
         };
 
         ArmsLoose: ArmsLoose {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(L) &kp O &kp O &kp S &kp E &kp LPAR &kp RPAR>;
+            bindings = <&none &kp DOLLAR &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(L) &kp O &kp O &kp S &kp E &kp LPAR &kp RPAR>;
             label = "ARMSLOOSE";
         };
 
@@ -667,8 +667,8 @@
         dyel {
             bindings = <
 &LRais   &trans    &trans     &trans     &trans      &trans                        &trans    &trans  &trans   &trans     &trans  &trans
-&LRelax  &trans    &Wistful   &trans     &trans      &trans                        &trans    &trans  &TiredY  &trans     &trans  &RHips
-&LBack   &angryy   &Surprise  &Dissoc    &Flicker    &trans                        &Happy    &trans  &trans   &Laughing  &trans  &RBack
+&LRelax  &trans    &Wistful   &trans     &trans      &trans                        &trans    &TODO   &TiredY  &trans     &trans  &RHips
+&LBack   &angryy   &Surprise  &Dissoc    &Flicker    &trans                        &Happy    &else   &trans   &Laughing  &trans  &RBack
 &trans   &Angrier  &trans     &trans     &trans      &Bowing  &trans    &AstCh     &Tense    &trans  &trans   &trans     &trans  &trans
                               &ArmsBack  &ArmsLoose  &Smile   &SadY     &NeutralY  &Contemp  &Open   &Smirk
             >;
