@@ -547,6 +547,41 @@
             bindings = <&none &kp LS(A) &kp S &kp T &kp E &kp R &kp I &kp O &kp N &kp DOT &kp A &kp R &kp M &kp S &kp LS(L) &kp O &kp O &kp S &kp E &kp LPAR &kp RPAR>;
             label = "ARMSLOOSE";
         };
+
+        LeftBack: LeftBack {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp L &kp E &kp F &kp T &kp A &kp R &kp M &kp DQT &kp COMMA &kp DQT &kp B &kp A &kp C &kp K &kp DQT &kp RPAR>;
+            label = "LEFTBACK";
+        };
+
+        LeftRelaxed: LeftRelaxed {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp L &kp E &kp F &kp T &kp A &kp R &kp M &kp DQT &kp COMMA &kp DQT &kp R &kp E &kp L &kp A &kp X &kp E &kp D &kp DQT &kp RPAR>;
+            label = "LEFTRELAXED";
+        };
+
+        LeftRaised: LeftRaised {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp L &kp E &kp F &kp T &kp A &kp R &kp M &kp DQT &kp COMMA &kp DQT &kp R &kp A &kp I &kp S &kp E &kp D &kp DQT &kp RPAR>;
+            label = "LEFTRAISED";
+        };
+
+        RightBack: RightBack {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp M &kp DQT &kp COMMA &kp DQT &kp B &kp A &kp C &kp K &kp DQT &kp RPAR>;
+            label = "RIGHTBACK";
+        };
+
+        RightHips: RightHips {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LPAR &kp DQT &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp M &kp DQT &kp COMMA &kp DQT &kp H &kp I &kp P &kp S &kp DQT &kp RPAR>;
+            label = "RIGHTHIPS";
+        };
     };
 
     keymap {
@@ -631,11 +666,11 @@
 
         AsterionDYEL {
             bindings = <
-&trans  &trans    &trans     &trans     &trans      &trans                                &trans          &trans  &trans   &trans     &trans  &trans
-&trans  &trans    &Wistful   &trans     &trans      &trans                                &trans          &trans  &Tired2  &trans     &trans  &trans
-&trans  &angry    &Surprise  &Dissoc    &Flicker    &trans                                &Happy          &trans  &trans   &Laughing  &trans  &trans
-&trans  &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AsterionChange  &Tense          &trans  &trans   &trans     &trans  &trans
-                             &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2        &Contemplative  &Open   &Smirk
+&LeftRaised   &trans    &trans     &trans     &trans      &trans                                &trans          &trans  &trans   &trans     &trans  &trans
+&LeftRelaxed  &trans    &Wistful   &trans     &trans      &trans                                &trans          &trans  &Tired2  &trans     &trans  &RightHips
+&LeftBack     &angry    &Surprise  &Dissoc    &Flicker    &trans                                &Happy          &trans  &trans   &Laughing  &trans  &RightBack
+&trans        &Angrier  &trans     &trans     &trans      &Bowing    &trans    &AsterionChange  &Tense          &trans  &trans   &trans     &trans  &trans
+                                   &ArmsBack  &ArmsLoose  &Smiling2  &Sad2     &Neutral2        &Contemplative  &Open   &Smirk
             >;
         };
     };
