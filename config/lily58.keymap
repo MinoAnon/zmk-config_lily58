@@ -582,6 +582,41 @@
             bindings = <&none &kp LPAR &kp DQT &kp R &kp I &kp G &kp H &kp T &kp A &kp R &kp M &kp DQT &kp COMMA &kp DQT &kp H &kp I &kp P &kp S &kp DQT &kp RPAR>;
             label = "RIGHTHIPS";
         };
+
+        LukeCh: LukeCh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(L) &kp U &kp K &kp E &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "LUKECH";
+        };
+
+        KotaCh: KotaCh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(K) &kp O &kp T &kp A &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "KOTACH";
+        };
+
+        ArgosCh: ArgosCh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(A) &kp R &kp G &kp O &kp S &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "ARGOSCH";
+        };
+
+        ThembaCh: ThembaCh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(T) &kp H &kp E &kp M &kp B &kp A &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "THEMBACH";
+        };
+
+        KhenCh: KhenCh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DLLR &kp LS(K) &kp H &kp E &kp N &kp B &kp I &kp S &kp H &kp DOT &kp C &kp H &kp A &kp N &kp G &kp E>;
+            label = "KHENCH";
+        };
     };
 
     keymap {
