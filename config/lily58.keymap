@@ -634,7 +634,7 @@
 &kp ESCAPE    &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                                                &kp N6   &kp N7           &kp N8     &kp N9   &kp N0    &kp EQUAL
 &kp LEFT_ALT  &kp Q   &kp W   &kp E    &kp R   &kp T                                                 &kp Y    &kp U            &kp I      &kp O    &kp P     &kp MINUS
 &kp CLCK      &kp A   &kp S   &kp D    &kp F   &kp G                                                 &kp H    &kp J            &kp K      &kp L    &kp SEMI  &kp RCTRL
-&mo 5         &kp Z   &kp X   &kp C    &kp V   &kp B             &kp LEFT_SHIFT    &kp SINGLE_QUOTE  &kp N    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
+&mo 4         &kp Z   &kp X   &kp C    &kp V   &kp B             &kp LEFT_SHIFT    &kp SINGLE_QUOTE  &kp N    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSLASH
                               &kp TAB  &mo 2   &kp LEFT_CONTROL  &kp SPACE         &kp BSPC          &kp RET  &kp RIGHT_SHIFT  &mo 1
             >;
 
@@ -654,7 +654,7 @@
 &kp GRAVE      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                               &kp N6       &msc SCRL_DOWN  &msc SCRL_UP     &kp PAGE_DOWN    &kp N0    &kp MINUS
 &mt LCTRL ESC  &trans  &trans  &trans  &trans  &trans                               &kp LEFT     &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans    &trans
 &kp LSHIFT     &trans  &trans  &trans  &trans  &trans  &trans    &kp RIGHT_CONTROL  &kp KP_PLUS  &kp MINUS       &kp EQUAL        &kp LBKT         &kp RBKT  &kp RIGHT_SHIFT
-                               &trans  &trans  &trans  &trans    &trans             &trans       &trans          &trans
+                               &trans  &trans  &trans  &trans    &kp RIGHT_ALT      &trans       &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -689,6 +689,16 @@
             >;
         };
 
+        dyel {
+            bindings = <
+&LRais   &trans    &trans     &trans     &trans      &trans                        &LukeCh   &KotaCh  &ArgosCh  &trans     &trans  &trans
+&LRelax  &trans    &Wistful   &trans     &trans      &trans                        &trans    &TODO    &TiredY   &trans     &trans  &RHips
+&LBack   &angryy   &Surprise  &Dissoc    &Flicker    &trans                        &Happy    &else    &trans    &Laughing  &trans  &RBack
+&trans   &Angrier  &trans     &trans     &trans      &Bowing  &trans    &AstCh     &Tense    &trans   &trans    &trans     &trans  &trans
+                              &ArmsBack  &ArmsLoose  &Smile   &SadY     &NeutralY  &Contemp  &Open    &Smirk
+            >;
+        };
+
         Chapter20Macros {
             bindings = <
 &trans  &trans  &trans  &trans        &trans     &trans                            &trans    &trans        &trans     &trans         &trans          &trans
@@ -696,16 +706,6 @@
 &trans  &trans  &trans  &Dominant     &trans     &Rough                            &AstCh    &else         &show      &UDGCG         &trans          &trans
 &tog 0  &trans  &trans  &ExtraCum     &Vocal     &trans       &SmallPP     &Musk0  &NoTouch  &PregnancyRP  &hide      &udgPANEL      &Dissolve       &trans
                         &Bull         &Human     &BigPP       &NormalPP    &Musk1  &Musk2    &Playerkinks  &BigBalls
-            >;
-        };
-
-        dyel {
-            bindings = <
-&LRais   &trans    &trans     &trans     &trans      &trans                        &trans    &trans  &trans   &trans     &trans  &trans
-&LRelax  &trans    &Wistful   &trans     &trans      &trans                        &trans    &TODO   &TiredY  &trans     &trans  &RHips
-&LBack   &angryy   &Surprise  &Dissoc    &Flicker    &trans                        &Happy    &else   &trans   &Laughing  &trans  &RBack
-&trans   &Angrier  &trans     &trans     &trans      &Bowing  &trans    &AstCh     &Tense    &trans  &trans   &trans     &trans  &trans
-                              &ArmsBack  &ArmsLoose  &Smile   &SadY     &NeutralY  &Contemp  &Open   &Smirk
             >;
         };
     };
